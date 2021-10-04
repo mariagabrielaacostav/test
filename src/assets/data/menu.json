@@ -1,0 +1,15 @@
+[
+	{
+		"nombre": "Personajes",
+		"redirect": "/dashboard/personajes"
+	},
+	{
+		"nombre": "Estudiantes",
+		"redirect": "/dashboard/estudiantes"
+	},
+	{
+		"nombre": "Profesores",
+		"redirect": "/dashboard/profesores"
+	}
+
+]

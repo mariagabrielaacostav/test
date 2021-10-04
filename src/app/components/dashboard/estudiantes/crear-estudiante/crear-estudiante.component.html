@@ -1,0 +1,63 @@
+<div class="container">
+	<mat-toolbar>
+		<span>Agregar Estudiante</span>
+	</mat-toolbar>
+
+	<mat-card style="margin-top: 10px;">
+		<form [formGroup] = 'form' (ngSubmit)='agregarEstudiante()'>
+
+			<mat-grid-list cols="4" rowHeight="70px">
+				<!-- Name -->
+				<mat-grid-tile [colspan]="1" [rowspan]="1">
+					<mat-form-field class="ancho">
+						<mat-label>Nombre</mat-label>
+						<input matInput autocomplete="off" formControlName='name'>
+					</mat-form-field>
+				</mat-grid-tile>
+
+			<!-- Image decorator -->
+				<mat-grid-tile [colspan]="3" [rowspan]="5">
+					<img src="./assets/img/student.png" width="350" height="350">
+				</mat-grid-tile>
+
+			<!-- Patronus -->
+				<mat-grid-tile [colspan]="1" [rowspan]="1">
+					<mat-form-field class="ancho">
+						<mat-label>Patronus</mat-label>
+						<input matInput autocomplete="off" formControlName='patronus'>
+					</mat-form-field>
+				</mat-grid-tile>
+
+			<!-- Edad -->
+				<mat-grid-tile [colspan]="1" [rowspan]="1">
+					<mat-form-field class="ancho">
+						<mat-label>Edad</mat-label>
+						<mat-select formControlName='age'>
+							<mat-option *ngFor="let item of age" [value]="item">
+								{{item}}
+							</mat-option>
+						</mat-select>
+					</mat-form-field>
+				</mat-grid-tile>
+
+				<!-- Image -->
+					<!-- <mat-grid-tile [colspan]="1" [rowspan]="1">
+						<mat-form-field class="ancho">
+							<mat-label>Image</mat-label>
+							<input matInput autocomplete="off" formControlName='image' type='file'>
+						</mat-form-field>
+					</mat-grid-tile> -->
+
+
+				<mat-grid-tile [colspan]="1" [rowspan]="1">
+					<button type="submit" [disabled]='form.invalid' mat-raised-button color="primary">Aceptar</button>
+					<button mat-raised-button style="margin: 20px;">Volver</button>
+
+				</mat-grid-tile>
+
+			</mat-grid-list>
+
+		</form>
+	</mat-card>
+
+</div>

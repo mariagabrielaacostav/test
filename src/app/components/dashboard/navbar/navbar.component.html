@@ -1,0 +1,20 @@
+<mat-toolbar color='primary'>
+		<span class="title_web">Howards - Portal institucional</span>
+		<span class="example-spacer"></span>
+
+
+		<button mat-button [matMenuTriggerFor]="menu" mat-button routerLink="./personajes" matTooltip="Lista por Casas">Personajes</button>
+		<mat-menu #menu="matMenu">
+		  <button mat-menu-item routerLink="./personajes/gryffindor">Gryffindor</button>
+			<button mat-menu-item routerLink="./personajes/hufflepuff">Hufflepuff</button>
+			<button mat-menu-item routerLink="./personajes/ravenclaw">Ravenclaw</button>
+			<button mat-menu-item routerLink="./personajes/slytherin">Slytherin</button>
+		</mat-menu>
+		<button mat-button routerLink="./estudiantes" matTooltip="Listado de Estudiantes">Estudiantes</button>
+		<button mat-button routerLink="./profesores" matTooltip="Listado de Personal">Profesores</button>
+
+		<button mat-icon-button class="example-icon logout-icon" aria-label="logout icon" routerLink="/logout" matTooltip="Cerrar Sesion">
+			<mat-icon>logout</mat-icon>
+		</button>
+
+</mat-toolbar>
